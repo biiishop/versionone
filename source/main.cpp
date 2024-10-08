@@ -204,7 +204,7 @@ void seadPrintHook(const char *fmt, ...) // hook for replacing sead::system::pri
 }
 
 int find(const char* seek) {
-    static constexpr const char *stageNames[17] = {"CapWorldHomeStage", "WaterfallWorldHomeStage", "SandWorldHomeStage", "LakeWorldHomeStage", "ForestWorldHomeStage", "CloudWorldHomeStage", "ClashWorldHomeStage", "CityWorldHomeStage", "SnowWorldHomeStage", "SeaWorldHomeStage", "LavaWorldHomeStage", "BossRaidWorldHomeStage", "SkyWorldHomeStage", "MoonWorldHomeStage", "PeachWorldHomeStage", "Special1WorldHomeStage", "Special2WorldHomeStage"};
+    static constexpr const char *stageNames[17] = {"CapWorldHomeStage", "WaterfallWorldHomeStage", "SandWorldHomeStage", "LakeWorldHomeStage", "ForestWorldHomeStage", "CloudWorldHomeStage", "ClashWorldHomeStage", "CityWorldHomeStage", "SnowWorldTownStage", "SeaWorldHomeStage", "LavaWorldHomeStage", "BossRaidWorldHomeStage", "SkyWorldHomeStage", "MoonWorldHomeStage", "PeachWorldHomeStage", "Special1WorldHomeStage", "Special2WorldHomeStage"};
     for (int i = 0; i < 17; ++i) {
         if (strcmp(stageNames[i], seek) == 0) return i;
     }
@@ -212,7 +212,7 @@ int find(const char* seek) {
 }
 
 std::array<std::array<int, 120>, 17> generate_2d_array(unsigned seed) {
-    std::array<std::array<int, 120>, 17> array;    
+    std::array<std::array<int, 120>, 17> array;
 
     // Initialize the vector with values from 1 to num_cols
     std::array<int, 120> numbers;
